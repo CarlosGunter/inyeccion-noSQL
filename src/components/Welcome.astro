@@ -1,0 +1,24 @@
+---
+import background from '../assets/background.svg';
+import LogIn from '@/components/LogIn';
+---
+
+<div>
+	<img class="background" src={background.src} alt="" fetchpriority="high" />
+	
+	<main class="grid place-items-center h-screen">
+		<LogIn client:load />
+	</main>
+
+</div>
+
+<style>
+	.background {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+</style>
