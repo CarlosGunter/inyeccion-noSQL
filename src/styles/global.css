@@ -1,1 +1,24 @@
 @import "tailwindcss";
+
+@theme {
+  --color-bg-primary: #a614c4;
+  --color-bg-secondary: #2a2a2a;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #cccccc;
+  --color-accent: #ff5733;
+}
+
+:root {
+  color-scheme: dark light;
+}
+html {
+  @apply scroll-smooth;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+  @apply text-balance;
+}
+p {
+  @apply text-pretty;
+  @apply leading-relaxed;
+}
