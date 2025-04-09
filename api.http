@@ -1,0 +1,7 @@
+POST http://localhost:4321/api/post-login
+Content-Type: application/json
+
+{
+  "priceMin": 0,
+  "priceMax": 600
+}

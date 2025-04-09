@@ -1,0 +1,8 @@
+HTTP/1.1 200 OK
+Vary: Origin
+content-type: text/plain;charset=UTF-8
+Date: Wed, 09 Apr 2025 21:22:32 GMT
+Connection: close
+Transfer-Encoding: chunked
+
+{"DBs":[{"name":"sample_airbnb","sizeOnDisk":55455744,"empty":false},{"name":"sample_analytics","sizeOnDisk":9998336,"empty":false},{"name":"sample_geospatial","sizeOnDisk":1273856,"empty":false},{"name":"sample_guides","sizeOnDisk":40960,"empty":false},{"name":"sample_mflix","sizeOnDisk":118202368,"empty":false},{"name":"sample_restaurants","sizeOnDisk":8151040,"empty":false},{"name":"sample_supplies","sizeOnDisk":2080768,"empty":false},{"name":"sample_training","sizeOnDisk":54083584,"empty":false},{"name":"sample_weatherdata","sizeOnDisk":2711552,"empty":false},{"name":"admin","sizeOnDisk":356352,"empty":false},{"name":"local","sizeOnDisk":2245488640,"empty":false}]}
