@@ -7,10 +7,10 @@ export function useFilters() {
     // Por cuestiones prácticas, se forzará la inyección de los valores
     // con el fin de facilitar el uso de la inyección
     // De otra forma, se podría usar una herramienta que intercepte la request
-    const min = !isNaN(parseInt(minPrice as string))
+    const min = /^\d+$/.test(minPrice as string)
       ? parseInt(minPrice as string)
       : minPrice
-    const max = !isNaN(parseInt(maxPrice as string))
+    const max = /^\d+$/.test(maxPrice as string)
       ? parseInt(maxPrice as string)
       : maxPrice
     const listings = await fetchListings({

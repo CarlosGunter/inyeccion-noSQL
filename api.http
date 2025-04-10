@@ -1,8 +1,18 @@
+### Test API
 POST http://localhost:4321/api/filter-listings
 Content-Type: application/json
 
 {
   "price": { "$gte": 0, "$lte": 600 }
+}
+
+### Test API with noSQL injection
+POST http://localhost:4321/api/filter-listings
+Content-Type: application/json
+
+{
+  "price": { "$gte": 0, "$lte": 600 },
+  "name": { "$eq": "Charming Flat in Downtown Moda" }
 }
 
 ### @Deprecated
