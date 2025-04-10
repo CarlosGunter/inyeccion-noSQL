@@ -27,7 +27,7 @@ export default function Listings({ data, isPending }: ListingsProps) {
           </article>
         ))
       }
-      {data && data.length === 0 && <p>No listings available.</p>}
+      {!isPending && data && data.length === 0 && <p>No listings available.</p>}
     </main>
   )
 }

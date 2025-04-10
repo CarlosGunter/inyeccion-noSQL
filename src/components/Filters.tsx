@@ -18,7 +18,7 @@ export default function Filters({ formAction, isPending }: FilterProps) {
             name="minPrice"
             placeholder="0"
             defaultValue={0}
-            className="border border-white rounded-xl py-1 px-2 w-15"
+            className="border border-white rounded-xl py-1 px-2"
             />
           </label>
           <label className="flex gap-2">
@@ -27,7 +27,7 @@ export default function Filters({ formAction, isPending }: FilterProps) {
             type="text"
             name="maxPrice"
             placeholder="1000"
-            className="border border-white rounded-xl py-1 px-2 w-15"
+            className="border border-white rounded-xl py-1 px-2"
             />
           </label>
         </div>
