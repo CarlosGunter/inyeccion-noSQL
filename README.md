@@ -1,48 +1,67 @@
-# Astro Starter Kit: Basics
+# 🛡️ NoSQL Injection - Proyecto de Demostración
 
-```sh
-pnpm create astro@latest -- --template basics
+Este proyecto muestra un ejemplo de vulnerabilidades de inyección NoSQL usando el [Sample AirBnB Listings Dataset](https://www.mongodb.com/docs/atlas/sample-data/sample-airbnb/).
+
+## 📋 Requisitos previos
+
+- Node.js (se recomienda la version 22 o superior)
+- pnpm o npm
+
+## ⚙️ Instalación
+
+### 📌 Recomendación: Usar pnpm
+
+#### 🛠️ Instalación de pnpm
+
+Actualizar corepack:
+```bash
+npm install --global corepack@latest
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+Habilitar pnpm:
+```bash
+corepack enable pnpm
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+### 📂 Clonar el repositorio
 
-## 🧞 Commands
+```bash
+git clone https://github.com/CarlosGunter/inyeccion-noSQL
+cd inyeccion-noSQL
+```
 
-All commands are run from the root of the project, from a terminal:
+### 📦 Instalar dependencias
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+Con pnpm:
+```bash
+pnpm install
+```
 
-## 👀 Want to learn more?
+Con npm:
+```bash
+npm install
+```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+### 📝 Configuración del entorno
+
+1. Crea un archivo `.env` en la raíz del proyecto basándote en el ejemplo `.env.example`:
+
+```bash
+cp .env.example .env
+```
+
+2. Edita el archivo `.env` para configurar las variables de entorno necesarias, como la URL de conexión a MongoDB.
+
+## 🚀 Ejecución del proyecto
+
+### 🧑‍💻 Modo desarrollo
+
+Con pnpm:
+```bash
+pnpm dev
+```
+
+Con npm:
+```bash
+npm run dev
+```
