@@ -1,7 +1,13 @@
-export default function Listings({ data }: { data: typeListings[] }) {
+interface ListingsProps {
+  data: typeListings[]
+  isPending: boolean
+}
+
+export default function Listings({ data, isPending }: ListingsProps) {
   return (
     <main className="grid gap-4 p-2 w-full justify-center">
       <h2 className="text-2xl font-bold text-center py-6">Listings</h2>
+      {isPending && <p className="text-center text-gray-200 text-lg">Loading listings...</p>}
       {
         data && data.map((listing) => (
           <article key={listing.id} className="border border-gray-300 rounded-xl bg-white/10 grid gap-4 max-w-4xl hover:shadow-lg transition-shadow duration-300 md:grid-cols-5 md:gap-2">

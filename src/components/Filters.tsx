@@ -1,5 +1,10 @@
+interface FilterProps {
+  formAction: (payload: FormData) => void
+  isPending: boolean
+}
 
-export default function Filters({ formAction, isPending }: { formAction: (payload: FormData) => void, isPending: boolean }) {
+
+export default function Filters({ formAction, isPending }: FilterProps) {
 
   return (
     <div className="grid gap-3 p-4 w-full bg-white/20 rounded-xl">
@@ -26,8 +31,12 @@ export default function Filters({ formAction, isPending }: { formAction: (payloa
             />
           </label>
         </div>
-        <button type="submit" className="bg-blue-500 text-white rounded-xl py-1 px-4 hover:bg-blue-600 transition-colors duration-300">
-          Search
+        <button
+        type="submit"
+        className="bg-blue-500 text-white rounded-xl py-1 px-4 hover:bg-blue-600 transition-colors duration-300"
+        disabled={isPending}
+        >
+          { isPending ? 'Loading...' : 'Apply Filters' }
         </button>
       </form>
     </div>

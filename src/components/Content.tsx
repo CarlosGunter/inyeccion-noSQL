@@ -8,7 +8,7 @@ export default function Content() {
   return (
     <div className="grid gap-3 p-4 w-full">
       <Filters formAction={formAction} isPending={isPending} />
-      <Listings data={state} />
+      <Listings data={state} isPending={isPending} />
     </div>
   )
 }
