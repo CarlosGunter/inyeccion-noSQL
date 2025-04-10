@@ -1,13 +1,9 @@
-import { useFilters } from "@/hooks/useFilters"
-
-export default function Listings() {
-  const { state } = useFilters()
-  
+export default function Listings({ state }: { state: unknown[] }) {
   return (
     <main>
       <div>Listings</div>
       {
-        state && state.map((listing: any) => (
+        state && state.listings?.map((listing: any) => (
           <div key={listing.id} className="border border-gray-300 rounded-xl p-4 mb-4">
             <h3 className="text-lg font-semibold">{listing.name}</h3>
             <p>{listing.description}</p>

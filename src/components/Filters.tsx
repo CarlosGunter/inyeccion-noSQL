@@ -1,7 +1,8 @@
 import { useFilters } from "@/hooks/useFilters"
+import Listings from "@/components/Listings"
 
 export default function Filters() {
-  const { isPending, formAction } = useFilters()
+  const { state, isPending, formAction } = useFilters()
 
   return (
     <div className="grid gap-3 p-4 w-full">
@@ -32,6 +33,7 @@ export default function Filters() {
           Search
         </button>
       </form>
+      <Listings state={state} />
     </div>
   )
 }
