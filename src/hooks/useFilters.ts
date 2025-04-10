@@ -7,10 +7,13 @@ export function useFilters() {
     const listings = await fetchListings({
       priceMin: Number(minPrice) || 0,
       priceMax: Number(maxPrice) || 10000
-    })
-    return listings;
+    }) as typeListings[]
+    return listings
   }
-  const [state, formAction, isPending] = useActionState(filterListings, null)
+  const [state, formAction, isPending] = useActionState(
+    filterListings,
+    [] as typeListings[]
+  )
 
   return { state, isPending, formAction }
 }

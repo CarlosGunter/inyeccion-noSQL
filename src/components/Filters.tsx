@@ -33,7 +33,7 @@ export default function Filters() {
           Search
         </button>
       </form>
-      <Listings state={state} />
+      <Listings data={state} />
     </div>
   )
 }

@@ -17,5 +17,6 @@ export async function fetchListings({
   if (!response.ok) {
     throw new Error("Failed to fetch listings")
   }
-  return await response.json()
+  const data = await response.json()
+  return data.listings as typeListings[]
 }
