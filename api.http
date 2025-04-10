@@ -2,6 +2,14 @@ POST http://localhost:4321/api/filter-listings
 Content-Type: application/json
 
 {
+  "price": { "$gte": 0, "$lte": 600 }
+}
+
+### @Deprecated
+POST http://localhost:4321/api/filter-listings
+Content-Type: application/json
+
+{
   "priceMin": 0,
   "priceMax": 600
 }

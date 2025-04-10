@@ -28,15 +28,13 @@ export async function POST({ request }: APIPostLoginProps): Promise<Response> {
       )
     }
     // Obtener los datos del body
-    const { priceMin, priceMax } = await request.json()
+    const filters = await request.json()
     // Conexión a la colección de MongoDB
     await client.connect()
     const admin = client.db("sample_airbnb")
     const collection = admin.collection('listingsAndReviews')
     // Filtrar los listings por precio
-    const listings = await collection.find({
-      price: { $gte: priceMin, $lte: priceMax }
-    }).limit(5).toArray()
+    const listings = await collection.find(filters).limit(5).toArray()
     // Verificar si se encontraron listings
     if (listings.length === 0) {
       return new Response(
