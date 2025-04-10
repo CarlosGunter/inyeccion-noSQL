@@ -1,4 +1,4 @@
-POST http://localhost:4321/api/post-login
+POST http://localhost:4321/api/filter-listings
 Content-Type: application/json
 
 {
