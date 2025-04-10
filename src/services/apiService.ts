@@ -1,6 +1,6 @@
 interface fetchListingsProps {
-  priceMin: number
-  priceMax: number
+  priceMin: number | FormDataEntryValue
+  priceMax: number | FormDataEntryValue
 }
 
 export async function fetchListings({
@@ -12,7 +12,9 @@ export async function fetchListings({
     headers: {
       "Content-Type": "application/json"
     },
-    body: JSON.stringify({ priceMin, priceMax })
+    body: JSON.stringify({
+      "price": { "$gte": priceMin, "$lte": priceMax }
+    })
   })
   if (!response.ok) {
     throw new Error("Failed to fetch listings")

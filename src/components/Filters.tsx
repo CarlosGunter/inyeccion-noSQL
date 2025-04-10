@@ -10,7 +10,7 @@ export default function Filters({ formAction, isPending }: { formAction: (payloa
             <span className="self-center">Min Price:</span>
             <input
             type="text"
-            name="min-price"
+            name="minPrice"
             placeholder="0"
             defaultValue={0}
             className="border border-white rounded-xl py-1 px-2 w-15"
@@ -20,7 +20,7 @@ export default function Filters({ formAction, isPending }: { formAction: (payloa
             <span className="self-center">Max Price:</span>
             <input
             type="text"
-            name="max-price"
+            name="maxPrice"
             placeholder="1000"
             className="border border-white rounded-xl py-1 px-2 w-15"
             />

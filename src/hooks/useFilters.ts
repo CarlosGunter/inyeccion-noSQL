@@ -4,9 +4,18 @@ import { fetchListings } from "@/services/apiService"
 export function useFilters() {
   const filterListings = async (prevState: unknown, formData: FormData) => {
     const { minPrice, maxPrice } = Object.fromEntries(formData.entries())
+    // Por cuestiones prácticas, se forzará la inyección de los valores
+    // con el fin de facilitar el uso de la inyección
+    // De otra forma, se podría usar una herramienta que intercepte la request
+    const min = !isNaN(parseInt(minPrice as string))
+      ? parseInt(minPrice as string)
+      : minPrice
+    const max = !isNaN(parseInt(maxPrice as string))
+      ? parseInt(maxPrice as string)
+      : maxPrice
     const listings = await fetchListings({
-      priceMin: Number(minPrice) || 0,
-      priceMax: Number(maxPrice) || 10000
+      priceMin: min || 0,
+      priceMax: max || 10000
     }) as typeListings[]
     return listings
   }
