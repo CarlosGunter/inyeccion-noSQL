@@ -1,8 +1,5 @@
-import { useFilters } from "@/hooks/useFilters"
-import Listings from "@/components/Listings"
 
-export default function Filters() {
-  const { state, isPending, formAction } = useFilters()
+export default function Filters({ formAction, isPending }: { formAction: (payload: FormData) => void, isPending: boolean }) {
 
   return (
     <div className="grid gap-3 p-4 w-full">
@@ -33,7 +30,6 @@ export default function Filters() {
           Search
         </button>
       </form>
-      <Listings data={state} />
     </div>
   )
 }
