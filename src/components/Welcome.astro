@@ -4,21 +4,10 @@ import Content from '@/components/Content';
 ---
 
 <div>
-	<img class="background" src={background.src} alt="" fetchpriority="high" />
+	<img class="fixed top-0 left-0 h-full w-full -z-10" src={background.src} alt="" fetchpriority="high" />
 	
 	<div class="flex justify-center max-w-5xl m-auto">
 		<Content client:load />
 	</div>
 
 </div>
-
-<style>
-	.background {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-	}
-</style>

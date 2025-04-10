@@ -4,7 +4,7 @@ export default function Listings({ data }: { data: typeListings[] }) {
       <h2 className="text-2xl font-bold text-center py-6">Listings</h2>
       {
         data && data.map((listing) => (
-          <article key={listing.id} className="border border-gray-300 rounded-xl grid gap-4 max-w-4xl hover:shadow-lg transition-shadow duration-300 md:grid-cols-5 md:gap-2">
+          <article key={listing.id} className="border border-gray-300 rounded-xl bg-white/10 grid gap-4 max-w-4xl hover:shadow-lg transition-shadow duration-300 md:grid-cols-5 md:gap-2">
             <img
             src={listing.imageUrl}
             onError={(e) => {

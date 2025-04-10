@@ -2,7 +2,7 @@
 export default function Filters({ formAction, isPending }: { formAction: (payload: FormData) => void, isPending: boolean }) {
 
   return (
-    <div className="grid gap-3 p-4 w-full">
+    <div className="grid gap-3 p-4 w-full bg-white/20 rounded-xl">
       <h2 className="text-xl">Filters</h2>
       <form action={formAction} className="flex justify-between">
         <div className="flex gap-4">
