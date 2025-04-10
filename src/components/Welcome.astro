@@ -1,13 +1,13 @@
 ---
 import background from '../assets/background.svg';
-import LogIn from '@/components/LogIn';
+import Filters from '@/components/Filters';
 ---
 
 <div>
 	<img class="background" src={background.src} alt="" fetchpriority="high" />
 	
 	<main class="grid place-items-center h-screen">
-		<LogIn client:load />
+		<Filters client:load />
 	</main>
 
 </div>
