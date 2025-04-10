@@ -21,7 +21,7 @@ export default function Listings({ data, isPending }: ListingsProps) {
             />
             <div className="grid p-4 md:col-span-3">
               <h3 className="text-xl font-semibold">{listing.name}</h3>
-              <p className="line-clamp-2 md:line-clamp-3">{listing.description}</p>
+              <p className="line-clamp-2 md:line-clamp-3 md:h-fit">{listing.description}</p>
               <p className="self-end text-gray-200 font-bold text-lg">${listing.price}</p>
             </div>
           </article>
