@@ -1,16 +1,28 @@
 ---
 import './src/styles/global.css'
+import Logo from '@/assets/logo.webp'
 ---
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href={Logo.src} />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Aircnc</title>
 	</head>
 	<body>
+		<header class="grid grid-cols-2 w-full justify-center p-5 sticky top-0 shadow-md z-10 bg-black/70 backdrop-blur-sm">
+			<div class="flex items-center gap-2">
+				<a href="/">
+					<img src={Logo.src} alt="Aircnc Logo" class="w-10" />
+				</a>
+				<h1>Aircnc</h1>
+			</div>
+			<div class="place-self-end self-center">
+				<a href="/howInjection">¿Como se hace la inyección?</a>
+			</div>
+		</header>
 		<slot />
 	</body>
 </html>
