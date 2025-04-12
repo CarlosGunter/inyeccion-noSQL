@@ -1,9 +1,11 @@
 ---
 import './src/styles/global.css'
+
+import background from '../assets/background.svg';
 import Logo from '@/assets/logo.webp'
 ---
 <!doctype html>
-<html lang="en">
+<html lang="en-es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -12,6 +14,7 @@ import Logo from '@/assets/logo.webp'
 		<title>Aircnc</title>
 	</head>
 	<body>
+		<img class="fixed top-0 left-0 h-full w-full -z-10" src={background.src} alt="" fetchpriority="high" />
 		<header class="grid grid-cols-2 w-full justify-center p-5 sticky top-0 shadow-md z-10 bg-black/70 backdrop-blur-sm">
 			<div class="flex items-center gap-2">
 				<a href="/">
@@ -20,7 +23,7 @@ import Logo from '@/assets/logo.webp'
 				<h1>Aircnc</h1>
 			</div>
 			<div class="place-self-end self-center">
-				<a href="/howInjection">¿Como se hace la inyección?</a>
+				<a href="/injection">¿Como se hace la inyección?</a>
 			</div>
 		</header>
 		<slot />

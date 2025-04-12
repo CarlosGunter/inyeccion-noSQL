@@ -1,11 +1,8 @@
 ---
-import background from '../assets/background.svg';
 import Content from '@/components/Content';
 ---
 
 <div>
-	<img class="fixed top-0 left-0 h-full w-full -z-10" src={background.src} alt="" fetchpriority="high" />
-	
 	<div class="flex justify-center max-w-5xl m-auto">
 		<Content client:load />
 	</div>
