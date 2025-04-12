@@ -1,3 +1,5 @@
+import { tryCatch } from "@/utils/try-catch"
+
 interface fetchListingsProps {
   priceMin: number | FormDataEntryValue
   priceMax: number | FormDataEntryValue
@@ -19,6 +21,9 @@ export async function fetchListings({
   if (!response.ok) {
     throw new Error("Failed to fetch listings")
   }
-  const data = await response.json()
-  return data.listings as typeListings[]
+  const { data, error, success } = await tryCatch(response.json())
+  if (!success) throw error
+  
+  const listings = data.listings as typeListings[]
+  return listings
 }

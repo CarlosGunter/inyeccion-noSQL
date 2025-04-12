@@ -1,7 +1,17 @@
-import { useActionState } from "react"
+import { useActionState, useState } from "react"
+import { tryCatch } from "@/utils/try-catch"
 import { fetchListings } from "@/services/apiService"
 
+interface ErrorProps {
+  isError: boolean
+  message: string
+}
+
 export function useFilters() {
+  const [error, setError] = useState<ErrorProps>({
+    isError: false,
+    message: ""
+  })
   const filterListings = async (prevState: unknown, formData: FormData) => {
     const { minPrice, maxPrice } = Object.fromEntries(formData.entries())
     // Por cuestiones prácticas, se forzará la inyección de los valores
@@ -13,16 +23,23 @@ export function useFilters() {
     const max = /^\d+$/.test(maxPrice as string)
       ? parseInt(maxPrice as string)
       : maxPrice
-    const listings = await fetchListings({
+    const { data, error, success } = await tryCatch(fetchListings({
       priceMin: min || 0,
       priceMax: max || 10000
-    }) as typeListings[]
-    return listings
+    }))
+    if (!success) {
+      setError({
+        isError: true,
+        message: error.message
+      })
+      return []
+    }
+    return data
   }
   const [state, formAction, isPending] = useActionState(
     filterListings,
     [] as typeListings[]
   )
 
-  return { state, isPending, formAction }
+  return { state, isPending, formAction, error }
 }
