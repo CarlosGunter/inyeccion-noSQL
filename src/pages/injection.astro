@@ -4,7 +4,29 @@ import { Content as InjectionContent } from '@/components/Injection.md';
 ---
 
 <Layout title="Injection" description="Injection page">
-  <div class="grid place-items-center max-w-[75ch] m-auto p-5 gap-3">
+  <div class="grid max-w-[80ch] mx-auto my-4 p-8 gap-4 rounded-lg shadow-md bg-bg-transparent injection">
     <InjectionContent />
   </div>
 </Layout>
+
+<style>
+  @reference '@/styles/global.css';
+
+  .injection {
+    h1 {
+      @apply text-3xl font-bold first-letter:float-left first-letter:text-6xl;
+    }
+    h2 {
+      @apply text-xl font-bold;
+    }
+    p {
+      @apply text-base leading-7;
+    }
+    a {
+      @apply text-bg-primary font-bold;
+    }
+    li {
+      @apply text-base leading-7 list-decimal list-inside;
+    }
+  }
+</style>
