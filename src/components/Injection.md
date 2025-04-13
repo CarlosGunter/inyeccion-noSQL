@@ -8,7 +8,7 @@ Sin embargo, también es posible reenviar peticiones al servidor de la API desde
 
 1. Abre las **DevTools** (F12 o Ctrl + Shift + I).
 2. Ve a la pestaña **Red** (Network).
-3. Realiza una acción en la aplicación que genere una petición a la API.
+3. Presiona 'Apply filters' para que genere una petición a la API.
 4. Busca la petición en la lista de peticiones (Se puede identifica por el método HTTP POST).
 5. Haz clic derecho sobre la petición y selecciona **Editar y reenviar**.
 6. Se abrirá una nueva pestaña donde podrás editar la petición y la respuesta.
@@ -20,7 +20,7 @@ Sin embargo, también es posible reenviar peticiones al servidor de la API desde
 1. Instala la extensión [Editar y enviar](https://chromewebstore.google.com/detail/ljfcmkhgcgljnomepfaeflehbdaimbhk?utm_source=item-share-cb) desde la tienda de Chrome.
 2. Abre las **DevTools** (F12 o Ctrl + Shift + I).
 3. Busca la nueva pestaña **Edit and resend**.
-4. Realiza una acción en la aplicación que genere una petición a la API.
+4. Presiona 'Apply filters' para que genere una petición a la API.
 5. Busca la petición en la lista de peticiones (Se puede identifica por el método HTTP POST).
 6. Selecciona la petición y se abrirá un nuevo cuadro de edición donde podrás modificar los detalles de la petición.
 7. Haz clic en el apartado **Payload** para ver y editar los datos que se enviarán en la petición.
