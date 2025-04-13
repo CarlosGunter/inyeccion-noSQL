@@ -6,6 +6,7 @@
   --color-bg-transparent: rgba(255, 255, 255, 0.1);
   --color-text-primary: #ffffff;
   --color-text-secondary: #cccccc;
+  --color-text-hover: var(--color-blue-300);
   --color-accent: #ff5733;
 }
 

@@ -10,7 +10,7 @@ export default function Listings({ data, isPending }: ListingsProps) {
       {isPending && <p className="text-center text-gray-200 text-lg">Loading listings...</p>}
       {
         data && data.map((listing) => (
-          <article key={listing.id} className="border border-gray-300 rounded-xl bg-white/10 grid gap-4 max-w-4xl hover:shadow-lg transition-shadow duration-300 md:grid-cols-5 md:gap-2">
+          <article key={listing.id} className="border border-gray-300 rounded-xl bg-bg-transparent grid gap-4 max-w-4xl hover:shadow-lg transition-shadow duration-300 md:grid-cols-5 md:gap-2">
             <img
             src={listing.imageUrl}
             onError={(e) => {

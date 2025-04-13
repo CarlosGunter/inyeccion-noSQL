@@ -17,13 +17,13 @@ import Logo from '@/assets/logo.webp'
 		<img class="fixed top-0 left-0 h-full w-full -z-10 blur-xs" src={background.src} alt="" fetchpriority="high" />
 		<header class="grid grid-cols-2 w-full justify-center p-5 sticky top-0 shadow-md z-10 bg-white/10 backdrop-blur-md">
 			<div class="">
-				<a href="/" class="flex items-center gap-2 hover:text-blue-300 transition-colors ease-linear w-fit">
+				<a href="/" class="flex items-center gap-2 hover:text-text-hover hover:first:bg-text-hover transition-colors ease-linear w-fit">
 					<img src={Logo.src} alt="Aircnc Logo" class="w-10" />
 					<h1 class="font-bold">Aircnc</h1>
 				</a>
 			</div>
 			<div class="place-self-end self-center">
-				<a href="/injection" class="hover:text-blue-300 transition-colors ease-linear">¿Como se hace la inyección?</a>
+				<a href="/injection" class="hover:text-text-hover transition-colors ease-linear">¿Como se hace la inyección?</a>
 			</div>
 		</header>
 		<slot />
